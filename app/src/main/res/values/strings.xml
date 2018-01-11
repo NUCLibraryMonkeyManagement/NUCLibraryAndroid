@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">NUCLibraryAndroid</string>
+    <string name="action_settings">Settings</string>
+    
+    <string name="main_my"/>
+    <string name="main_locale"/>
+    <string name="main_appointment"/>
+    <string name="main_setting"/>
+</resources>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/my"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="@string/main_my"/>
+
+    <item
+        android:id="@+id/locale"
+        android:icon="@drawable/ic_event_seat_black_24dp"
+        android:title="@string/main_locale"/>
+
+    <item
+        android:id="@+id/appointment"
+        android:icon="@drawable/ic_edit_black_24dp"
+        android:title="@string/main_appointment"/>
+
+    <item
+        android:id="@+id/setting"
+        android:icon="@drawable/ic_settings_black_24dp"
+        android:title="@string/main_setting"/>
+
+</menu>
