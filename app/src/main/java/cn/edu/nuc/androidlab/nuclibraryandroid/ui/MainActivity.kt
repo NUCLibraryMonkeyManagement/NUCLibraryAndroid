@@ -1,25 +1,24 @@
-package cn.edu.nuc.androidlab.nuclibraryandroid
+package cn.edu.nuc.androidlab.nuclibraryandroid.ui
 
 import android.os.Bundle
 import android.view.KeyEvent
 import android.view.Menu
 import android.view.MenuItem
+import cn.edu.nuc.androidlab.nuclibraryandroid.R
 import cn.edu.nuc.androidlab.nuclibraryandroid.base.BaseActivity
 import cn.edu.nuc.androidlab.nuclibraryandroid.ui.appointmentPack.AppointFragment
-import cn.edu.nuc.androidlab.nuclibraryandroid.ui.localePack.LocaleFragment
 import cn.edu.nuc.androidlab.nuclibraryandroid.ui.mePack.MeFragment
 import cn.edu.nuc.androidlab.nuclibraryandroid.ui.settingPack.SettingFragment
 
-import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_main.*
 
 class MainActivity : BaseActivity() {
 
     override fun getResLayout(): Int = R.layout.activity_main
 
-    override fun initView() {
+/*    override fun initView() {
         setSupportActionBar(toolbar)
-    }
+    }*/
 
     override fun logic(savedInstanceState: Bundle?) {
         if(savedInstanceState == null){
@@ -29,16 +28,13 @@ class MainActivity : BaseActivity() {
         navi.setOnNavigationItemSelectedListener {
             item ->
             when(item.itemId){
-                R.id.my->{
+                R.id.my ->{
                     replaceFragment(MeFragment.instance, R.id.main_content)
                 }
-                R.id.locale->{
-                    replaceFragment(LocaleFragment.instance, R.id.main_content)
-                }
-                R.id.appointment->{
+                R.id.appointment ->{
                     replaceFragment(AppointFragment.instance, R.id.main_content)
                 }
-                R.id.setting->{
+                R.id.setting ->{
                     replaceFragment(SettingFragment.instance, R.id.main_content)
                 }
             }

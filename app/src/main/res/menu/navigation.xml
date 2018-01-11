@@ -6,13 +6,8 @@
         android:title="@string/main_my"/>
 
     <item
-        android:id="@+id/locale"
-        android:icon="@drawable/ic_event_seat_black_24dp"
-        android:title="@string/main_locale"/>
-
-    <item
         android:id="@+id/appointment"
-        android:icon="@drawable/ic_edit_black_24dp"
+        android:icon="@drawable/ic_event_seat_black_24dp"
         android:title="@string/main_appointment"/>
 
     <item

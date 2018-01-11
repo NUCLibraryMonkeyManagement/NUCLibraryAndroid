@@ -4,6 +4,8 @@ import cn.edu.nuc.androidlab.nuclibraryandroid.R
 import cn.edu.nuc.androidlab.nuclibraryandroid.base.BaseFragment
 
 /**
+ * Setting
+ *
  * Created by MurphySL on 2018/1/11.
  */
 class SettingFragment : BaseFragment(){

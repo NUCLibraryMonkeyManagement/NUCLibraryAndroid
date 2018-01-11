@@ -19,7 +19,6 @@
 
     <style name="AppTheme.Splash">
         <item name="android:windowFullscreen">true</item>
-        <item name="android:windowBackground">@drawable/ic_event_seat_black_24dp</item>
     </style>
 
 </resources>
