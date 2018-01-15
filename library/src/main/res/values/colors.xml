@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#fabc05</color>
+    <color name="colorPrimaryDark">#b68802</color>
+    <color name="colorAccent">#fabc05</color>
 
     <color name="google_red">#ea4235</color>
     <color name="google_yellow">#fabc05</color>

@@ -1,7 +1,10 @@
 package cn.edu.nuc.androidlab.nuclibraryandroid.ui.settingPack
 
+import android.content.Intent
 import cn.edu.nuc.androidlab.nuclibraryandroid.R
 import cn.edu.nuc.androidlab.nuclibraryandroid.base.BaseFragment
+import cn.edu.nuc.androidlab.nuclibraryandroid.ui.ReviseActivity
+import kotlinx.android.synthetic.main.fragment_setting.*
 
 /**
  * Setting
@@ -18,6 +21,12 @@ class SettingFragment : BaseFragment(){
     }
 
     override fun getResLayout(): Int = R.layout.fragment_setting
+
+    override fun logic() {
+        setting_revise.setOnClickListener{
+            startActivity(Intent(activity, ReviseActivity::class.java))
+        }
+    }
 
 
 }

@@ -2,9 +2,11 @@ package cn.edu.nuc.androidlab.nuclibraryandroid.ui
 
 import android.content.Intent
 import android.os.Bundle
+import cn.edu.nuc.androidlab.nuclibraryandroid.MyApp
 import cn.edu.nuc.androidlab.nuclibraryandroid.R
 import cn.edu.nuc.androidlab.nuclibraryandroid.base.BaseActivity
 import cn.edu.nuc.androidlab.nuclibraryandroid.util.RxSchedulerHelper
+import cn.edu.nuc.androidlab.nuclibraryandroid.util.SharedPreferencesHelper
 import io.reactivex.Observable
 import java.util.concurrent.TimeUnit
 
@@ -13,7 +15,7 @@ import java.util.concurrent.TimeUnit
  *
  * Created by MurphySL on 2018/1/11.
  */
-class SplachActivity : BaseActivity(){
+class SplashActivity : BaseActivity(){
 
     override fun getResLayout(): Int = R.layout.activity_splash
 
@@ -23,7 +25,15 @@ class SplachActivity : BaseActivity(){
                 .subscribe(
                         {},{},
                         {
-                            startActivity(Intent(SplachActivity@this, MainActivity::class.java))
+                            val helper = SharedPreferencesHelper(this)
+                            val user = helper.getUserInfo()
+                            if(user == null){
+                                startActivity(Intent(SplashActivity@this, LoginActivity::class.java))
+                            }else{
+                                MyApp.instance.user = user
+                                startActivity(Intent(SplashActivity@this, MainActivity::class.java))
+                            }
+                            finish()
                         }
                 )
     }

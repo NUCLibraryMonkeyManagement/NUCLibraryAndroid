@@ -15,18 +15,28 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"></Toolbar>
 
-        <android.support.v7.widget.RecyclerView
+        <cn.iwgang.countdownview.CountdownView
+            android:id="@+id/count_down"
+            app:timeTextSize="60sp"
+            app:isShowHour="true"
+            app:suffixTextSize="60sp"
+            app:timeBgColor="@color/google_yellow"
+
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+            android:layout_height="120dp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/appointment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
     </LinearLayout>
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
-        android:background="@color/google_red"
-        app:srcCompat="@drawable/ic_edit_black_24dp"/>
+        app:srcCompat="@drawable/ic_block_white_24dp"/>
 
 </android.support.design.widget.CoordinatorLayout>

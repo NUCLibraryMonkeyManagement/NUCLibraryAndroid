@@ -2,6 +2,7 @@ package cn.edu.nuc.androidlab.nuclibraryandroid.ui.mePack
 
 import cn.edu.nuc.androidlab.nuclibraryandroid.R
 import cn.edu.nuc.androidlab.nuclibraryandroid.base.BaseFragment
+import kotlinx.android.synthetic.main.fragment_me.*
 
 /**
  * MeFragment
@@ -18,5 +19,9 @@ class MeFragment : BaseFragment(){
     }
 
     override fun getResLayout(): Int = R.layout.fragment_me
+
+    override fun logic(){
+
+    }
 
 }

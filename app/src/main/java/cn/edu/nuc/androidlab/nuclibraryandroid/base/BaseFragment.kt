@@ -20,14 +20,18 @@ abstract class BaseFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val root = inflater?.inflate(getResLayout(), container, false)
         init(root, savedInstanceState)
-        logic()
         return root
+    }
+
+    override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        logic()
     }
 
     protected fun snackBar(view : View, content : String) = Snackbar.make(view, content, Snackbar.LENGTH_SHORT).show()
 
-    protected fun logic() {}
+    open protected fun logic() {}
 
-    protected fun init(root: View?, savedInstanceState: Bundle?) {}
+    open protected fun init(root: View?, savedInstanceState: Bundle?) {}
 
 }
