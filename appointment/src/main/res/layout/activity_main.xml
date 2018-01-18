@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context="cn.edu.nuc.androidlab.appointment.MainActivity">
 
-    <cn.edu.nuc.androidlab.appointment.view.SeatTable
+    <cn.edu.nuc.androidlab.nuclibraryandroid.view.SeatTable
         android:id="@+id/seat"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />

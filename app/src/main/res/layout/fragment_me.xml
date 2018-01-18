@@ -9,26 +9,12 @@
         android:layout_width="match_parent"
         android:orientation="vertical"
         android:layout_height="match_parent">
-        
-        <Toolbar
-            android:background="@color/google_red"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"></Toolbar>
-
-        <cn.iwgang.countdownview.CountdownView
-            android:id="@+id/count_down"
-            app:timeTextSize="60sp"
-            app:isShowHour="true"
-            app:suffixTextSize="60sp"
-            app:timeBgColor="@color/google_yellow"
-
-            android:layout_width="match_parent"
-            android:layout_height="120dp" />
 
         <android.support.v7.widget.RecyclerView
-            android:id="@+id/appointment"
+            android:id="@+id/me_recycler_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
+
     </LinearLayout>
 
     <android.support.design.widget.FloatingActionButton

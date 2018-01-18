@@ -1,5 +1,6 @@
 package cn.edu.nuc.androidlab.nuclibraryandroid.data
 
+import cn.edu.nuc.androidlab.nuclibraryandroid.bean.Classroom
 import cn.edu.nuc.androidlab.nuclibraryandroid.bean.UserResult
 import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import io.reactivex.Observable
@@ -60,5 +61,7 @@ interface CommonApi{
 
     @POST("/user")
     fun insertUser(@Path("studentID")studentID: Int) : Observable<UserResult>
+
+    fun getClassrooms() : Observable<Classroom>
 
 }

@@ -1,8 +1,4 @@
-if(isDebug.toBoolean()){
-    apply plugin: 'com.android.application'
-}else{
-    apply plugin: 'com.android.library'
-}
+apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
@@ -10,9 +6,6 @@ android {
     compileSdkVersion 26
 
     defaultConfig {
-        if(isDebug.toBoolean()){
-            applicationId "cn.edu.nuc.androidlab.library"
-        }
         minSdkVersion 21
         targetSdkVersion 26
         versionCode 1
@@ -43,11 +36,18 @@ android {
 
 }
 
+allprojects {
+    repositories {
+        jcenter() // 或者 mavenCentral()
+    }
+}
+
 dependencies {
-    implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
-    implementation 'com.android.support:appcompat-v7:26.1.0'
-    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    api "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    api 'com.android.support:appcompat-v7:26.1.0'
+    api 'com.android.support.constraint:constraint-layout:1.0.2'
+    api 'com.android.support:design:26.1.0'
     api 'com.android.support:palette-v7:26.1.0'
     api 'com.google.code.gson:gson:2.8.0'
     api 'com.squareup.picasso:picasso:2.5.2'
@@ -60,6 +60,13 @@ dependencies {
     api 'com.squareup.okhttp3:okhttp:3.8.1'
     api 'com.squareup.okhttp3:logging-interceptor:3.2.0'
     api 'com.zhy:base-rvadapter:3.0.3'
+    api 'de.hdodenhof:circleimageview:2.1.0'
+    api 'com.github.iwgang:countdownview:2.1.6'
+    api 'com.contrarywind:Android-PickerView:3.2.5'
+
+    api 'com.amap.api:3dmap:latest.integration'
+    //api 'com.amap.api:navi-3dmap:latest.integration'
+    api 'com.amap.api:search:latest.integration'
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'

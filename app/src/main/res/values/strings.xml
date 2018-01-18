@@ -30,4 +30,6 @@
     <string name="setting_me">我</string>
     <string name="setting_revise">修改密码</string>
     <string name="setting_about">关于我们</string>
+
+    <string name="me_title">今日预约</string>
 </resources>

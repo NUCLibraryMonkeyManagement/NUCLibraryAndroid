@@ -2,8 +2,7 @@ package cn.edu.nuc.androidlab.nuclibraryandroid.ui.settingPack
 
 import android.content.Intent
 import cn.edu.nuc.androidlab.nuclibraryandroid.R
-import cn.edu.nuc.androidlab.nuclibraryandroid.base.BaseFragment
-import cn.edu.nuc.androidlab.nuclibraryandroid.ui.ReviseActivity
+import cn.edu.nuc.androidlab.nuclibraryandroid.baseModel.BaseFragment
 import kotlinx.android.synthetic.main.fragment_setting.*
 
 /**
